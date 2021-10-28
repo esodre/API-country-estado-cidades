@@ -1,4 +1,4 @@
-package com.esodre.citiesapi.countries;
+package com.esodre.citiesapi.countries.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,7 +1,7 @@
-package com.esodre.citiesapi;
+package com.esodre.citiesapi.countries.resource;
 
-import com.esodre.citiesapi.countries.Country;
-import com.esodre.citiesapi.repository.CountryRepository;
+import com.esodre.citiesapi.countries.model.Country;
+import com.esodre.citiesapi.countries.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -23,6 +22,7 @@ public class CountryResource {
 
     @GetMapping
     public Page<Country> countries(Pageable page){
+
         return repository.findAll(page);
     }
 
